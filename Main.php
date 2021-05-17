@@ -9,4 +9,5 @@ $Viajem->setDistancia($_POST['distancia']);
 
 $consumoMedio = $Viajem->consumoMedio();
 
+
 header("Location: Formulario.php?consumoMedio=".$consumoMedio);

@@ -15,24 +15,26 @@
 		<p>Distância percorida em Km: </p><input type="number" name="distancia">
 		<p>Consumo total de combustível em Litros:</p><input type="number" name="consumo">
 		<br><br>
-		<input type="submit" value="Calcular consumo médio">
+		<input type="submit" value="Calcular consumo médio" name="consumoMedio">
 	</form>
 
 </body>
 </html>
 <?php
-	$consumoMedio = $_GET['consumoMedio'];
+	if(isset($_GET['consumoMedio'])){
+		$consumoMedio = $_GET['consumoMedio'];
 
-	if ($consumoMedio != 'NAN') {
+		if ($consumoMedio != 'NAN') {
 
-		if ($consumoMedio >= 10) {
-			echo "Consumo Médio da viajem: ";
-			echo "<p class =verde>".$consumoMedio."</p>"."Km/L";
+			if ($consumoMedio >= 10) {
+				echo "Consumo Médio da viajem: ";
+				echo "<p class =verde>".$consumoMedio."</p>"."Km/L";
+			}else{
+				echo "Consumo Médio da viajem: ";
+				echo "<p class =vermelho>".$consumoMedio."</p>"."Km/L";
+			}
 		}else{
-			echo "Consumo Médio da viajem: ";
-			echo "<p class =vermelho>".$consumoMedio."</p>"."Km/L";
-		}
-	}else{
-		echo "Preencha distância e consumo!";
-	}	
-?>
+			echo "Preencha distância e consumo!";
+		}	
+	}
+

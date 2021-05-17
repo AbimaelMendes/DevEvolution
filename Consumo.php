@@ -31,7 +31,8 @@ class Consumo{
 
 	//Função retorna custo médio combustível
 	public function consumoMedio(){
-		return $this->distancia / $this->consumo;
+		$consumoMedio = $this->distancia / $this->consumo;
+		return $consumoMedio;
 	}
 
 }
