@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,6 +22,7 @@
 </body>
 </html>
 <?php
+
 	if(isset($_GET['consumoMedio'])){
 		$consumoMedio = $_GET['consumoMedio'];
 
@@ -37,4 +39,4 @@
 			echo "Preencha distância e consumo!";
 		}	
 	}
-
+?>
